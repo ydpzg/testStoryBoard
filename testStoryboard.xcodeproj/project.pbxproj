@@ -14,6 +14,7 @@
 		78A3DD5419DDE11F00903EC4 /* testStoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A3DD5319DDE11F00903EC4 /* testStoryboardTests.swift */; };
 		78A3DD5E19DEFE6600903EC4 /* TestUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A3DD5D19DEFE6600903EC4 /* TestUITableViewController.swift */; };
 		78A3DD6019DF07C400903EC4 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A3DD5F19DF07C400903EC4 /* TestTableViewCell.swift */; };
+		78D24FB819DFE54A00402EC3 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D24FB719DFE54A00402EC3 /* PlayerDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		78A3DD5319DDE11F00903EC4 /* testStoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testStoryboardTests.swift; sourceTree = "<group>"; };
 		78A3DD5D19DEFE6600903EC4 /* TestUITableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUITableViewController.swift; sourceTree = "<group>"; };
 		78A3DD5F19DF07C400903EC4 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		78D24FB719DFE54A00402EC3 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerDetailsViewController.swift; path = ../PlayerDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +81,12 @@
 		78A3DD3D19DDE11F00903EC4 /* testStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				78D24FB719DFE54A00402EC3 /* PlayerDetailsViewController.swift */,
 				78A3DD4019DDE11F00903EC4 /* AppDelegate.swift */,
 				78A3DD4219DDE11F00903EC4 /* ViewController.swift */,
 				78A3DD5D19DEFE6600903EC4 /* TestUITableViewController.swift */,
-				78A3DD4419DDE11F00903EC4 /* Main.storyboard */,
 				78A3DD5F19DF07C400903EC4 /* TestTableViewCell.swift */,
+				78A3DD4419DDE11F00903EC4 /* Main.storyboard */,
 				78A3DD4719DDE11F00903EC4 /* Images.xcassets */,
 				78A3DD3E19DDE11F00903EC4 /* Supporting Files */,
 			);
@@ -218,6 +221,7 @@
 				78A3DD6019DF07C400903EC4 /* TestTableViewCell.swift in Sources */,
 				78A3DD4319DDE11F00903EC4 /* ViewController.swift in Sources */,
 				78A3DD4119DDE11F00903EC4 /* AppDelegate.swift in Sources */,
+				78D24FB819DFE54A00402EC3 /* PlayerDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +407,7 @@
 				78A3DD5919DDE11F00903EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78A3DD5A19DDE11F00903EC4 /* Build configuration list for PBXNativeTarget "testStoryboardTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +416,7 @@
 				78A3DD5C19DDE11F00903EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
