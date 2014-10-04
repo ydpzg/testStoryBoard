@@ -13,6 +13,8 @@ class TestUITableViewController: UITableViewController {
     var data : NSMutableArray = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         data.addObject("123")
         data.addObject("456")
         data.addObject("789")
