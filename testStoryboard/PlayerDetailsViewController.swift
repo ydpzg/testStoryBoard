@@ -10,25 +10,44 @@ import UIKit
 
 protocol PlayerDetailsDelegate {
     func cancel()
-    func done()
+    func done(playerName: String, gameName: String)
 }
 
 
-class PlayerDetailsViewController: UITableViewController {
+class PlayerDetailsViewController: UITableViewController, GamePickerDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     var delegate:PlayerDetailsDelegate?
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        NSLog("init PlayerDetailsViewController")
+        
+    }
+
+    
     @IBAction func cancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
         self.delegate?.cancel()
+        
         println("cancel2")
     }
     
     @IBAction func done(sender: AnyObject) {
-        self.delegate?.done()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        //var alertView = UIAlertView();
+       //alertView.title = "hint"
+        //alertView.message = "name can not be empty."
+        //alertView.show()
+        
+        self.delegate?.done(nameTextField.text, gameName: gameLabel.text!)
         println("done2")
+    }
+    
+    func back(game: String) {
+        detailLabel.text = game
     }
     
     override func viewDidLoad() {
@@ -119,7 +138,13 @@ class PlayerDetailsViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "ChooseGame" {
+            
+            let tableController = segue.destinationViewController as? UINavigationController
+            let playerDetailsViewController = tableController?.viewControllers[0] as? GamePickerViewController
+            playerDetailsViewController?.delegate = self
+        }
     }
     
-
+ 
 }
