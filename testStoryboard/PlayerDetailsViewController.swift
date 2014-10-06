@@ -16,6 +16,9 @@ protocol PlayerDetailsDelegate {
 
 class PlayerDetailsViewController: UITableViewController {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
     var delegate:PlayerDetailsDelegate?
     
     @IBAction func cancel(sender: AnyObject) {
@@ -44,29 +47,36 @@ class PlayerDetailsViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+/*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 0
     }
-
+*/
+    /*
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 0
     }
-
+*/
+    // 把输入看到点击效果扩展到整个父布局
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.section == 0) {
+            self.nameTextField.becomeFirstResponder()
+        }
+    }
     /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
 
         // Configure the cell...
 
         return cell
+
     }
     */
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
@@ -104,7 +114,7 @@ class PlayerDetailsViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using [segue destinationViewController].

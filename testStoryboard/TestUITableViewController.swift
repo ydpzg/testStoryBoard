@@ -14,11 +14,11 @@ class TestUITableViewController: UITableViewController, PlayerDetailsDelegate {
     var data : NSMutableArray = NSMutableArray()
     
     func done() {
-        println("done")
+        self.dismissViewControllerAnimated(true, completion: nil)
 
     }
     func cancel() {
-        println("cancel")
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
